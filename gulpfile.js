@@ -73,14 +73,14 @@ gulp.task('uglify',function(){
 //     .pipe(gulp.dest('src/css/concat/'))
 // });
 gulp.task('sass', function(){
-	gulp.src('src/css/sass/*.scss')
+	gulp.src('src/css/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('src/css/concat/'))
 });
 
 //合并文件
 gulp.task('concat',function(){
-	gulp.src(['src/css/concat/reset.css', 'src/css/concat/common.css', 'src/css/concat/style.css', 'src/css/concat/responsive.css'])
+	gulp.src(['src/css/concat/reset.css', 'src/css/concat/common.css', 'src/css/concat/style.css'])
 	.pipe(plugins.concat('style.css'))
 	.pipe(plugins.autoprefixer([
       	'Chrome >= 20',
