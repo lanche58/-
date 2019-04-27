@@ -162,7 +162,7 @@ gulp.task('auto',function(){
 	gulp.watch(['src/img/*.{jpg,png}','src/images/*.{jpg,png}'],['imagemin']);
 	//gulp.watch('dest/css/*.css',['autoprefixer']);
 	//gulp.watch('src/js/*.js',['uglify']);
-	gulp.watch('src/css/sass/*.scss',['sass']);
+	gulp.watch('src/css/sass/**/*.scss',['sass']);
 	gulp.watch(['src/css/concat/*.css','src/js/concat/*.js'],['concat']);
 	gulp.watch(['src/**/copy/**','src/*.{html,ico}'],['copy']);
 	gulp.watch(['src/html/*.html','src/_include/*.html'],['fileinclude']);
